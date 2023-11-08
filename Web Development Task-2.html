@@ -1,0 +1,70 @@
+
+<html>
+<head>
+  <title>Temperature Converter</title>
+  <style>
+    body {
+      font-family: bold, sans-serif;
+      background-color: #f2f2f2;
+    }
+    .container {
+      max-width: 450px;
+      margin: 0 auto;
+      padding: 50px;
+      background-color: #fff;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(115, 2, 2, 0.1);
+    }
+    h1 {
+      text-align: center;
+      color: rgb(26, 8, 8);
+    }
+    label {
+      display: block;
+      margin-bottom: 5px;
+      color: rgb(10, 2, 2);
+    }
+    input {
+      width: 100%;
+      padding: 10px;
+      border: 1.5px solid rgb(4, 1, 1);
+      border-radius: 5px;
+    }
+
+    button {
+      width: 100%;
+      padding: 10px;
+      background-color: #da158e;
+      color: rgb(247, 240, 240);
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .result {
+      margin-top: 10px;
+      font-weight: bold;
+      text-align: center;
+      color: #118de6;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Temperature Converter</h1>
+    <label for="celsius">Celsius:</label>
+    <input type="number" id="celsius">
+    <br>
+    <br>
+    <button onclick="convert()">Convert</button>
+    <div class="result" id="result"></div>
+  </div>
+
+  <script>
+    function convert() {
+      var celsius = parseFloat(document.getElementById("celsius").value);
+      var fahrenheit = (celsius * 9/5) + 32;
+      document.getElementById("result").innerHTML = celsius + "°C is " + fahrenheit + "°F";
+    }
+  </script>
+</body>
+</html>
